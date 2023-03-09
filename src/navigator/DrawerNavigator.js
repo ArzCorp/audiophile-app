@@ -1,4 +1,5 @@
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import CustomDrawerContent from '../components/CustomDrawerContent';
 import CheckoutScreen from '../screens/CheckoutScreen';
 import EarphonesScreen from '../screens/EarphonesScreen';
 import HeadphonesScreen from '../screens/HeadphonesScreen';
@@ -10,7 +11,8 @@ const Drawer = createDrawerNavigator();
 
 export default function DrawerNavigator() {
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator
+      drawerContent={props => <CustomDrawerContent {...props} />}>
       <Drawer.Screen name="Home" component={HomeScreen} />
       <Drawer.Screen name="Headphones" component={HeadphonesScreen} />
       <Drawer.Screen name="Speakers" component={SpeakersScreen} />
