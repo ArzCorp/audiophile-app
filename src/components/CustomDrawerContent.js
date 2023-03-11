@@ -1,17 +1,29 @@
 import React from 'react';
-import { Button } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import CustomNavigationTab from './CustomNavigationTab';
+import { IMAGE_TABS } from '../utils/constans';
 
-export default function CustomDrawerContent({ state, navigation }) {
-  const routes = state.routes || [];
-  return routes.map(route => {
-    console.log(state);
-    return (
-      <CustomNavigationTab
-        key={route.name}
-        title={route.name}
-        imageUri={`./src/assets/assets/tab-image-${route.name.toLowerCase()}.png`}
-      />
-    );
-  });
+export default function CustomDrawerContent({ state }) {
+  const allRoutes = state.routes || [];
+  const routes = allRoutes.filter(route => route.name !== 'Home');
+
+  return (
+    <ScrollView style={styles['custom-drawer__container']}>
+      {routes.map(route => (
+        <CustomNavigationTab
+          imageURL={IMAGE_TABS.find(image => image.tab === route.name).image}
+          key={route.name}
+          title={route.name}
+        />
+      ))}
+    </ScrollView>
+  );
 }
+
+const styles = StyleSheet.create({
+  'custom-drawer__container': {
+    height: '100%',
+    marginVertical: 32,
+    paddingHorizontal: 24,
+  },
+});
