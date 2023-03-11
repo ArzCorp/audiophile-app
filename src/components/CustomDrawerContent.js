@@ -23,7 +23,7 @@ export default function CustomDrawerContent({ state }) {
 const styles = StyleSheet.create({
   'custom-drawer__container': {
     height: '100%',
-    marginVertical: 32,
+    marginBottom: 32,
     paddingHorizontal: 24,
   },
 });

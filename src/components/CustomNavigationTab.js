@@ -20,10 +20,12 @@ export default function CustomNavigationTab({ imageURL, title = '' }) {
 }
 
 const styles = StyleSheet.create({
-  tab__container: {
-    marginBottom: 16,
+  tab__container: {},
+  tab__image: {
+    left: '34%',
+    top: '20%',
+    zIndex: 2,
   },
-  tab__image: {},
   'tab__container--gray': {
     backgroundColor: '#F1F1F1',
     padding: 22,
