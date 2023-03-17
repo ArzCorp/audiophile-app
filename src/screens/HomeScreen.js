@@ -1,30 +1,12 @@
 import React from 'react';
 import { View } from 'react-native';
-import Button from '../components/Button';
+import IconButton from '../components/IconButton';
 
 export default function HomeScreen() {
+  console.log(API_URL);
   return (
     <View>
-      <Button
-        onClick={() => console.log('Soy una prop')}
-        width={'50%'}
-        center
-        ghost
-        title="Button center"
-      />
-      <Button
-        onClick={() => console.log('Soy una prop')}
-        width={'50%'}
-        left
-        dark
-        title="Button left"
-      />
-      <Button
-        onClick={() => console.log('Soy una prop')}
-        width={'50%'}
-        right
-        title="Button right"
-      />
+      <IconButton title="SHOP" />
     </View>
   );
 }
