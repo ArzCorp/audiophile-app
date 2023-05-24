@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faBars, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { View, Pressable, Image, StyleSheet } from 'react-native';
-import { BLACK_COLOR, WHITE_COLOR } from '../utils/constans';
+import { COLORS } from '../utils/constans';
 import audiophileLogo from '../assets/audiophile-logo.png';
 import { useNavigation } from '@react-navigation/native';
 
@@ -37,10 +37,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 24,
     paddingVertical: 34,
-    backgroundColor: BLACK_COLOR,
+    backgroundColor: COLORS.BLACK,
   },
   Header__icon: {
-    color: WHITE_COLOR,
+    color: COLORS.WHITE,
     width: 23,
     height: 23,
   },

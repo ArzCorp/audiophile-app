@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import Button from './Button';
 import HomeBannerImage from '../assets/home-banner.png';
-import { BLACK_COLOR, WHITE_COLOR } from '../utils/constans';
+import { COLORS } from '../utils/constans';
 
 export default function HomeBanner() {
   return (
@@ -29,10 +29,10 @@ const styles = StyleSheet.create({
   banner__container: {
     paddingTop: 108,
     paddingBottom: 116,
-    backgroundColor: BLACK_COLOR,
+    backgroundColor: COLORS.BLACK,
   },
   banner__text: {
-    color: WHITE_COLOR,
+    color: COLORS.WHITE,
     textAlign: 'center',
   },
   ['banner__text--new']: {

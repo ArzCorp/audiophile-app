@@ -1,6 +1,6 @@
 import React from 'react';
 import { Pressable, Text, StyleSheet, View } from 'react-native';
-import { BLACK_COLOR, ORANGE_COLOR, WHITE_COLOR } from '../utils/constans';
+import { COLORS } from '../utils/constans';
 
 export default function Button({
   onClick = () => console.log('Default value'),
@@ -22,10 +22,14 @@ export default function Button({
 
   const verticalStyles = center ? 'center' : 'flex-start';
 
-  const bgColorStyles = ghost ? WHITE_COLOR : dark ? BLACK_COLOR : ORANGE_COLOR;
+  const bgColorStyles = ghost
+    ? COLORS.WHITE
+    : dark
+    ? COLORS.BLACK
+    : COLORS.ORANGE;
 
-  const textStyles = ghost ? BLACK_COLOR : WHITE_COLOR;
-  const borderColorStyles = ghost ? BLACK_COLOR : 'transparent';
+  const textStyles = ghost ? COLORS.BLACK : COLORS.WHITE;
+  const borderColorStyles = ghost ? COLORS.BLACK : 'transparent';
 
   return (
     <View

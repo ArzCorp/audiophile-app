@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { Pressable, Text, StyleSheet } from 'react-native';
-import { ORANGE_COLOR } from '../utils/constans';
+import { COLORS } from '../utils/constans';
 
 export default function IconButton({ onClick = () => {}, title = 'Default' }) {
   return (
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   button__icon: {
-    color: ORANGE_COLOR,
+    color: COLORS.ORANGE,
     width: 10,
     height: 10,
     fontSize: 13,
