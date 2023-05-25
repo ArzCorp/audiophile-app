@@ -12,6 +12,12 @@ export const COLORS = {
   WHITE: '#FAFAFA',
 };
 
+export const FONT_WEIGHT = {
+  regular: '400',
+  medium: '500',
+  bold: '700',
+};
+
 export const IMAGE_TABS = [
   {
     tab: 'Headphones',
