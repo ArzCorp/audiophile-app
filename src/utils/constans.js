@@ -1,8 +1,10 @@
-import tabImageHeadphones from '../assets/tab-image-headphones.png';
-import tabImageEarphones from '../assets/tab-image-earphones.png';
-import tabImageSpeakers from '../assets/tab-image-speakers.png';
+import categoryImageHeadphones from '../assets/images/tab-image-headphones.png';
+import categoryImageEarphones from '../assets/images/tab-image-earphones.png';
+import categoryImageSpeakers from '../assets/images/tab-image-speakers.png';
 
-export const COLORS = {
+export const EMPTY_STRING = '';
+
+export const COLORS = Object.freeze({
   ORANGE: '#D87D4A',
   LIGHT_ORANGE: '#fbaf85',
   LIGHT_BLACK: '#101010',
@@ -10,25 +12,30 @@ export const COLORS = {
   GRAY: '#F1F1F1',
   LIGHT_WHITE: '#FAFAFA',
   WHITE: '#FAFAFA',
-};
+});
 
-export const FONT_WEIGHT = {
+export const FONT_WEIGHT = Object.freeze({
   regular: '400',
   medium: '500',
   bold: '700',
-};
+});
 
-export const IMAGE_TABS = [
-  {
-    tab: 'Headphones',
-    image: tabImageHeadphones,
-  },
-  {
-    tab: 'Earphones',
-    image: tabImageEarphones,
-  },
-  {
-    tab: 'Speakers',
-    image: tabImageSpeakers,
-  },
-];
+export const ENDPOINTS = Object.freeze({
+  CATEGORIES: '/categories',
+});
+
+export const METHODS = Object.freeze({
+  GET: 'GET',
+  POST: 'POST',
+  DELETE: 'DELETE',
+});
+
+export const CATEGORY_IMAGES = Object.freeze({
+  Headphones: categoryImageHeadphones,
+  Earphones: categoryImageEarphones,
+  Speakers: categoryImageSpeakers,
+});
+
+export const ERRORS = Object.freeze({
+  GENERAL: 'Error, intente más tarde.',
+});
