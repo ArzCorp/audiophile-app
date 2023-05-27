@@ -1,19 +1,19 @@
 import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 import CustomNavigationTab from './CustomNavigationTab';
-import { IMAGE_TABS } from '../utils/constans';
+import { CATEGORY_IMAGES, COLORS, IMAGE_TABS } from '../utils/constans';
+import { useCategories } from '../hooks/useCategories';
 
-export default function CustomDrawerContent({ state }) {
-  const allRoutes = state.routes || [];
-  const routes = allRoutes.filter(route => route.name !== 'Home');
+export default function CustomDrawerContent() {
+  const { categories } = useCategories();
 
   return (
     <ScrollView style={styles['custom-drawer__container']}>
-      {routes.map(route => (
+      {categories.map(category => (
         <CustomNavigationTab
-          imageURL={IMAGE_TABS.find(image => image.tab === route.name).image}
-          key={route.name}
-          title={route.name}
+          imageURL={CATEGORY_IMAGES[category.name]}
+          key={category.name}
+          title={category.name}
         />
       ))}
     </ScrollView>
@@ -22,6 +22,7 @@ export default function CustomDrawerContent({ state }) {
 
 const styles = StyleSheet.create({
   'custom-drawer__container': {
+    backgroundColor: COLORS.WHITE,
     height: '100%',
     marginBottom: 32,
     paddingHorizontal: 24,
