@@ -1,16 +1,15 @@
 import React from 'react';
-import { View } from 'react-native';
-import IconButton from '../components/IconButton';
-import { API_URL } from '@env';
+import { ScrollView } from 'react-native';
 import Header from '../components/Header';
 import HomeBanner from '../components/HomeBanner';
+import CustomDrawerContent from '../components/CustomDrawerContent';
 
 export default function HomeScreen() {
-  console.log(API_URL);
   return (
-    <View>
+    <ScrollView>
       <Header />
       <HomeBanner />
-    </View>
+      <CustomDrawerContent />
+    </ScrollView>
   );
 }
