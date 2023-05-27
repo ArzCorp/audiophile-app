@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faBars, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { View, Pressable, Image, StyleSheet } from 'react-native';
 import { COLORS } from '../utils/constans';
-import audiophileLogo from '../assets/audiophile-logo.png';
+import audiophileLogo from '../assets/images/audiophile-logo.png';
 import { useNavigation } from '@react-navigation/native';
 
 export default function Header() {
@@ -32,6 +32,8 @@ export default function Header() {
 
 const styles = StyleSheet.create({
   header__container: {
+    position: 'relative',
+    zIndex: 10,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
