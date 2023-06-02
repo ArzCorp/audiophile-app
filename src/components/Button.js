@@ -23,7 +23,7 @@ export default function Button({
   const verticalStyles = center ? 'center' : 'flex-start';
 
   const bgColorStyles = ghost
-    ? COLORS.WHITE
+    ? COLORS.TRANSPARENT
     : dark
     ? COLORS.BLACK
     : COLORS.ORANGE;

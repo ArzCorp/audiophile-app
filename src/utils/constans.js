@@ -12,6 +12,7 @@ export const COLORS = Object.freeze({
   GRAY: '#F1F1F1',
   LIGHT_WHITE: '#FAFAFA',
   WHITE: '#FAFAFA',
+  TRANSPARENT: 'transparent',
 });
 
 export const FONT_WEIGHT = Object.freeze({
