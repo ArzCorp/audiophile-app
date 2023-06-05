@@ -1,6 +1,11 @@
 import categoryImageHeadphones from '../assets/images/tab-image-headphones.png';
 import categoryImageEarphones from '../assets/images/tab-image-earphones.png';
 import categoryImageSpeakers from '../assets/images/tab-image-speakers.png';
+import {
+  faFacebookSquare,
+  faInstagram,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
 
 export const EMPTY_STRING = '';
 
@@ -40,3 +45,20 @@ export const CATEGORY_IMAGES = Object.freeze({
 export const ERRORS = Object.freeze({
   GENERAL: 'Error, intente más tarde.',
 });
+
+export const SCREENS = ['Home', 'Headphones', 'Speakers', 'Earphones'];
+
+export const SOCIAL_MEDIA_ICONS = [
+  {
+    name: 'Facebook',
+    icon: faFacebookSquare,
+  },
+  {
+    name: 'Twitter',
+    icon: faTwitter,
+  },
+  {
+    name: 'Instagram',
+    icon: faInstagram,
+  },
+];
