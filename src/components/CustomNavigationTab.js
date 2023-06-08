@@ -4,7 +4,10 @@ import { Text, View, StyleSheet, Image, Pressable } from 'react-native';
 
 export default function CustomNavigationTab({ imageURL, title = '' }) {
   const navigation = useNavigation();
-  const navigateToScreen = () => navigation.navigate(title);
+  const navigateToScreen = () =>
+    navigation.navigate('products', {
+      productCategory: title,
+    });
 
   return (
     <View style={styles.tab__container}>
