@@ -1,4 +1,4 @@
-# Audiophile app - 🔖v0.0.1
+# Audiophile app - 🔖v1.0.0
 This is a project developed with react native for android devices
 # TODO
 - build UI
