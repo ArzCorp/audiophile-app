@@ -7,11 +7,17 @@ import { useNavigation } from '@react-navigation/native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import footerBannerImage from '../assets/images/footer-banner.png';
 
-export default function Footer() {
+export default function Footer({ handleNavbarItemClick }) {
   const { navigate } = useNavigation();
 
   const navigateTo = page => {
-    navigate(page);
+    handleNavbarItemClick();
+
+    if (page === SCREENS[0]) {
+      return navigate(page);
+    }
+
+    navigate('products', { productCategory: page });
   };
 
   return (
