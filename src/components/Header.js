@@ -7,14 +7,18 @@ import audiophileLogo from '../assets/images/audiophile-logo.png';
 import { useNavigation } from '@react-navigation/native';
 
 export default function Header() {
-  const navigation = useNavigation();
+  const { openDrawer, navigate } = useNavigation();
 
   const openMenu = () => {
-    navigation.openDrawer();
+    openDrawer();
   };
 
   const openShoppingCart = () => {
     console.log('Open shopping Cart');
+  };
+
+  const moveToHome = () => {
+    navigate('Home');
   };
 
   return (
@@ -22,7 +26,9 @@ export default function Header() {
       <Pressable onPress={openMenu}>
         <FontAwesomeIcon style={styles.Header__icon} icon={faBars} />
       </Pressable>
-      <Image style={styles.header__logo} source={audiophileLogo} />
+      <Pressable onPress={moveToHome}>
+        <Image style={styles.header__logo} source={audiophileLogo} />
+      </Pressable>
       <Pressable onPress={openShoppingCart}>
         <FontAwesomeIcon style={styles.Header__icon} icon={faCartShopping} />
       </Pressable>
